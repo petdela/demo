@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Vista Maestros Delete
+    </title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 660px;
+          background: -webkit-linear-gradient(bottom, #C6808C, #6D5B87, #44364B, #EC745C, #F5AD8C);
+        }
+        .contenedor{
+            width: 70%;
+            height: 70%;
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 40px;
+        }
+        .sub{
+            margin-bottom: 10px;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label{
+            margin-bottom: 15px;
+        }
+        .input{
+            margin-bottom: 10px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+    <h1>
+        Ingrese el id del maestro a eliminar, si desea borrar todos ingrese -1
+    </h1>
+    <form method="post" action="/maestro/delete">
+        <div class="sub">
+        <h4>Llene los datos y envie el formulario para eliminar el maestro:</h4>
+        </div>
+        <div class="input">
+            <label for="id">Identificador: </label>
+            <input type="text" name="id">
+        </div>
+        <div class="input">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    </div>
+</body>
+
+</html>

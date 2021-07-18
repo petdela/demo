@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Vista Maestros Get
+    </title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 660px;
+          background: -webkit-linear-gradient(bottom, #C6808C, #6D5B87, #44364B, #EC745C, #F5AD8C);
+        }
+        .contenedor{
+            width: 70%;
+            height: 70%;
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 40px;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h3{
+            margin-bottom: 15px;
+        }
+        li{
+            margin-bottom: 10px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+    <h1>
+        <%= titulo %>
+    </h1>
+    <ul class="timeline">
+        <h3>Listado de <%= titulo %> registrados</h3>
+        <% for (var i = 0; i < maestros.length; i++) { %>
+        <li class="timeline-yellow">
+            <div class="timeline-time">
+                <span class="date">
+                    <%= maestros[i].titulo %>
+                </span>
+                <span class="time">
+                    <%= maestros[i].fecha %> </span>
+            </div>
+        </li>
+        <% } %>
+    </ul>
+    </div>
+</body>
+
+</html>
